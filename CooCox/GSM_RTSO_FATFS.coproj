@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Project version="2G - 2.0.5" name="GSM_RTSO_FATFS">
+  <Target name="GSM_RTSO_FATFS" isCurrent="1">
+    <Device manufacturerId="9" manufacturerName="ST" chipId="261" chipName="STM32F407VG" boardId="" boardName="" boardUrl="" coreId="4" coreName="Cortex M4"/>
+    <BuildOption>
+      <Compile>
+        <Option name="OptimizationLevel" value="0"/>
+        <Option name="UseFPU" value="0"/>
+        <Option name="UserEditCompiler" value=""/>
+        <Option name="SupportCPlusplus" value="0"/>
+        <Option name="DEBUG" value="2"/>
+        <Option name="WARNING" value="1"/>
+        <Option name="FPU" value="2"/>
+        <Includepaths>
+          <Includepath path="../middlewares/third_party/freertos/source/include"/>
+          <Includepath path="../inc"/>
+          <Includepath path="../middlewares/third_party/freertos/source/portable/gcc/arm_cm4f"/>
+          <Includepath path="../drivers/cmsis/device/st/stm32f4xx/include"/>
+          <Includepath path="../middlewares/third_party/freertos/source/cmsis_rtos"/>
+          <Includepath path="../drivers/cmsis/include"/>
+          <Includepath path="../drivers/stm32f4xx_stdperiph_driver/inc"/>
+        </Includepaths>
+        <DefinedSymbols>
+          <Define name="STM32F407VG"/>
+          <Define name="USE_STDPERIPH_DRIVER"/>
+          <Define name="STM32F407xx"/>
+          <Define name="STM32F407XX"/>
+          <Define name="__FPU_USED"/>
+        </DefinedSymbols>
+      </Compile>
+      <Link useDefault="0">
+        <Option name="DiscardUnusedSection" value="0"/>
+        <Option name="UserEditLinkder" value=""/>
+        <Option name="UseMemoryLayout" value="1"/>
+        <Option name="nostartfiles" value="0"/>
+        <Option name="LTO" value="0"/>
+        <Option name="IsNewStartupCode" value="1"/>
+        <LinkedLibraries/>
+        <MemoryAreas debugInFlashNotRAM="1">
+          <Memory name="IROM1" type="ReadOnly" size="0x00100000" startValue="0x08000000"/>
+          <Memory name="IRAM1" type="ReadWrite" size="0x00020000" startValue="0x20000000"/>
+          <Memory name="IROM2" type="ReadOnly" size="" startValue=""/>
+          <Memory name="IRAM2" type="ReadWrite" size="0x00010000" startValue="0x10000000"/>
+        </MemoryAreas>
+        <LocateLinkFile path="../../users/blackgold/appdata/roaming/coocox/coide/configuration/programdata/gsm_rtso_fatfs/arm-gcc-link.ld" type="0"/>
+      </Link>
+      <Output>
+        <Option name="OutputFileType" value="0"/>
+        <Option name="Path" value="./"/>
+        <Option name="Name" value="GSM_RTSO_FATFS"/>
+        <Option name="HEX" value="1"/>
+        <Option name="BIN" value="1"/>
+      </Output>
+      <User>
+        <UserRun name="Run#1" type="Before" checked="0" value=""/>
+        <UserRun name="Run#1" type="After" checked="0" value=""/>
+      </User>
+    </BuildOption>
+    <DebugOption>
+      <Option name="org.coocox.codebugger.gdbjtag.core.adapter" value="ST-Link"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.debugMode" value="SWD"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.clockDiv" value="1M"/>
+      <Option name="org.coocox.codebugger.gdbjtag.corerunToMain" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.jlinkgdbserver" value="D:\Program Files (x86)\SEGGER\JLink_V490e\JLinkGDBServerCL.exe"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.userDefineGDBScript" value=""/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.targetEndianess" value="0"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.jlinkResetMode" value="Type 0: Normal"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.resetMode" value="SYSRESETREQ"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.ifSemihost" value="0"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.ifCacheRom" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.ipAddress" value="127.0.0.1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.portNumber" value="2009"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.autoDownload" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.verify" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.downloadFuction" value="Erase Effected"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.defaultAlgorithm" value="C:\Users\blackgold\AppData\Roaming\CooCox\CoIDE\config\flash\CooCox-Flash\CoIDE_STM32F4xx_1024K\STM32F4xx_1024.elf"/>
+    </DebugOption>
+    <ExcludeFile/>
+  </Target>
+  <Components path="./">
+    <Component id="97" name="cmsis_core" path="" type="BasicComponet"/>
+  </Components>
+  <LocalComponents/>
+  <Files>
+    <File name="Driver/SPL/Src/stm32f4xx_usart.c" path="../Drivers/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_usart.c" type="1"/>
+    <File name="Driver/SPL/Src" path="" type="2"/>
+    <File name="Driver/SPL/Src/stm32f4xx_gpio.c" path="../Drivers/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_gpio.c" type="1"/>
+    <File name="Driver/CMSIS" path="" type="2"/>
+    <File name="FreeRTOS/event_groups.c" path="../Middlewares/Third_Party/FreeRTOS/Source/event_groups.c" type="1"/>
+    <File name="GSM/Inc/TcpIp.h" path="../GSM/TcpIp.h" type="1"/>
+    <File name="GSM/src" path="" type="2"/>
+    <File name="components/cmsis_core/core_cmInstr.h" path="components/coocox-master/cmsis_core/source/core_cmInstr.h" type="1"/>
+    <File name="GSM/Inc/ComPort.h" path="../GSM/ComPort.h" type="1"/>
+    <File name="components/cmsis_core/core_cm7.h" path="components/coocox-master/cmsis_core/source/core_cm7.h" type="1"/>
+    <File name="components/cmsis_core/core_cmFunc.h" path="components/coocox-master/cmsis_core/source/core_cmFunc.h" type="1"/>
+    <File name="components/cmsis_core" path="" type="2"/>
+    <File name="GSM/src/ComPort.c" path="../GSM/ComPort.c" type="1"/>
+    <File name="Driver/SPL/Src/stm32f4xx_iwdg.c" path="../Drivers/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_iwdg.c" type="1"/>
+    <File name="freertos.c" path="../Src/freertos.c" type="1"/>
+    <File name="system_stm32f4xx.c" path="../Src/system_stm32f4xx.c" type="1"/>
+    <File name="components/cmsis_core/arm_common_tables.h" path="components/coocox-master/cmsis_core/source/arm_common_tables.h" type="1"/>
+    <File name="GSM/Inc/GenericTypeDefs.h" path="../GSM/GenericTypeDefs.h" type="1"/>
+    <File name="components/cmsis_core/arm_const_structs.h" path="components/coocox-master/cmsis_core/source/arm_const_structs.h" type="1"/>
+    <File name="gpio.c" path="../Src/gpio.c" type="1"/>
+    <File name="Driver/SPL" path="" type="2"/>
+    <File name="Driver" path="" type="2"/>
+    <File name="components/cmsis_core/core_sc300.h" path="components/coocox-master/cmsis_core/source/core_sc300.h" type="1"/>
+    <File name="GSM/src/gsm.c" path="../GSM/gsm.c" type="1"/>
+    <File name="stm32f4xx_it.c" path="../Src/stm32f4xx_it.c" type="1"/>
+    <File name="GSM/src/SMS.c" path="../GSM/SMS.c" type="1"/>
+    <File name="FreeRTOS/list.c" path="../Middlewares/Third_Party/FreeRTOS/Source/list.c" type="1"/>
+    <File name="Driver/SPL/Src/stm32f4xx_rcc.c" path="../Drivers/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_rcc.c" type="1"/>
+    <File name="components/cmsis_core/core_cm4_simd.h" path="components/coocox-master/cmsis_core/source/core_cm4_simd.h" type="1"/>
+    <File name="GSM/src/TcpIp.c" path="../GSM/TcpIp.c" type="1"/>
+    <File name="FreeRTOS/timers.c" path="../Middlewares/Third_Party/FreeRTOS/Source/timers.c" type="1"/>
+    <File name="Driver/SPL/Src/misc.c" path="../Drivers/STM32F4xx_StdPeriph_Driver/src/misc.c" type="1"/>
+    <File name="FreeRTOS/cmsis_os.c" path="../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c" type="1"/>
+    <File name="FreeRTOS/portmacro.h" path="../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h" type="1"/>
+    <File name="FreeRTOS/queue.c" path="../Middlewares/Third_Party/FreeRTOS/Source/queue.c" type="1"/>
+    <File name="GSM/src/VoiceCall.c" path="../GSM/VoiceCall.c" type="1"/>
+    <File name="GSM/Inc/SMS.h" path="../GSM/SMS.h" type="1"/>
+    <File name="components/cmsis_core/core_cm0plus.h" path="components/coocox-master/cmsis_core/source/core_cm0plus.h" type="1"/>
+    <File name="components/cmsis_core/core_sc000.h" path="components/coocox-master/cmsis_core/source/core_sc000.h" type="1"/>
+    <File name="FreeRTOS/heap_2.c" path="../Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_2.c" type="1"/>
+    <File name="components/cmsis_core/core_cm0.h" path="components/coocox-master/cmsis_core/source/core_cm0.h" type="1"/>
+    <File name="GSM/Inc/TQueue.h" path="../GSM/TQueue.h" type="1"/>
+    <File name="GSM/src/Arch.c" path="../GSM/Arch.c" type="1"/>
+    <File name="GSM/src/TQueue.c" path="../GSM/TQueue.c" type="1"/>
+    <File name="GSM/Inc" path="" type="2"/>
+    <File name="GSM/Inc/tick.h" path="../GSM/tick.h" type="1"/>
+    <File name="FreeRTOS/tasks.c" path="../Middlewares/Third_Party/FreeRTOS/Source/tasks.c" type="1"/>
+    <File name="components/cmsis_core/core_cmSimd.h" path="components/coocox-master/cmsis_core/source/core_cmSimd.h" type="1"/>
+    <File name="Driver/SPL/Src/stm32f4xx_tim.c" path="../Drivers/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_tim.c" type="1"/>
+    <File name="components/cmsis_core/core_cm3.h" path="components/coocox-master/cmsis_core/source/core_cm3.h" type="1"/>
+    <File name="Driver/SPL/Inc" path="" type="2"/>
+    <File name="GSM/Inc/Arch.h" path="../GSM/Arch.h" type="1"/>
+    <File name="GSM/Inc/hardwareProfile.h" path="../GSM/hardwareProfile.h" type="1"/>
+    <File name="tim.c" path="../Src/tim.c" type="1"/>
+    <File name="GSM" path="" type="2"/>
+    <File name="GSM/Inc/gsm.h" path="../GSM/gsm.h" type="1"/>
+    <File name="components/cmsis_core/core_cm4.h" path="components/coocox-master/cmsis_core/source/core_cm4.h" type="1"/>
+    <File name="GSM/Inc/1Wire.h" path="../GSM/1Wire.h" type="1"/>
+    <File name="FreeRTOS/croutine.c" path="../Middlewares/Third_Party/FreeRTOS/Source/croutine.c" type="1"/>
+    <File name="components" path="" type="2"/>
+    <File name="GSM/Inc/VoiceCall.h" path="../GSM/VoiceCall.h" type="1"/>
+    <File name="GSM/src/1Wire.c" path="../GSM/1Wire.c" type="1"/>
+    <File name="FreeRTOS/port.c" path="../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c" type="1"/>
+    <File name="FreeRTOS" path="" type="2"/>
+    <File name="main.c" path="../Src/main.c" type="1"/>
+    <File name="components/cmsis_core/arm_math.h" path="components/coocox-master/cmsis_core/source/arm_math.h" type="1"/>
+  </Files>
+  <Bookmarks/>
+</Project>

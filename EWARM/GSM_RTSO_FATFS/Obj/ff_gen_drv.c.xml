@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<source name="ff_gen_drv.c" location="E:\Git_Rep\GSM_RTSO_FATFS\GSM_RTSO_FATFS\Middlewares\Third_Party\FatFs\src" is_link="no">
+ <warning>
+ <file>E:\Git_Rep\GSM_RTSO_FATFS\GSM_RTSO_FATFS\Middlewares\Third_Party\FreeRTOS\Source\CMSIS_RTOS\cmsis_os.h</file>
+  <warningID>25</warningID>
+  <method/>
+  <lineNo>445</lineNo>
+  <column>9</column>
+  <checkName>DEFINE-hash-multiple</checkName>
+  <message>Multiple # or ## operators used, order of evaluation is unspecified</message>
+  <trace/>
+  <rules>MISRAC2004-19.12 MISRAC++2008-16-3-1 </rules>
+  <severity>Medium</severity>
+ </warning>
+ <warning>
+ <file>E:\Git_Rep\GSM_RTSO_FATFS\GSM_RTSO_FATFS\Middlewares\Third_Party\FreeRTOS\Source\CMSIS_RTOS\cmsis_os.h</file>
+  <warningID>26</warningID>
+  <method/>
+  <lineNo>805</lineNo>
+  <column>9</column>
+  <checkName>DEFINE-hash-multiple</checkName>
+  <message>Multiple # or ## operators used, order of evaluation is unspecified</message>
+  <trace/>
+  <rules>MISRAC2004-19.12 MISRAC++2008-16-3-1 </rules>
+  <severity>Medium</severity>
+ </warning>
+</source>

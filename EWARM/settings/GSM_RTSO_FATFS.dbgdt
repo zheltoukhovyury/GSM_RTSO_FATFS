@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<Project>
+  <Desktop>
+    <Static>
+      <Debug-Log>
+        
+        
+      <ColumnWidth0>20</ColumnWidth0><ColumnWidth1>1861</ColumnWidth1></Debug-Log>
+      <Build>
+        
+        
+        
+        
+      <ColumnWidth0>20</ColumnWidth0><ColumnWidth1>1395</ColumnWidth1><ColumnWidth2>372</ColumnWidth2><ColumnWidth3>93</ColumnWidth3></Build>
+      <Workspace>
+        <ColumnWidths>
+          
+          
+          
+          
+        <Column0>288</Column0><Column1>15</Column1><Column2>12</Column2><Column3>0</Column3></ColumnWidths>
+      </Workspace>
+      <Disassembly>
+        <col-names>
+          
+          
+        <item>Disassembly</item><item>_I0</item></col-names>
+        <col-widths>
+          
+          
+        <item>500</item><item>20</item></col-widths>
+        <DisasmHistory/>
+        <PreferedWindows>
+          
+          
+          
+          
+        <Position>2</Position><ScreenPosX>0</ScreenPosX><ScreenPosY>0</ScreenPosY><Windows/></PreferedWindows>
+        
+        
+      <ShowCodeCoverage>1</ShowCodeCoverage><ShowInstrProfiling>1</ShowInstrProfiling></Disassembly>
+      <CallStack>
+        <col-names>
+          
+          
+        <item>Frame</item><item>_I0</item></col-names>
+        <col-widths>
+          
+          
+        <item>3500</item><item>20</item></col-widths>
+      <PreferedWindows><Position>1</Position><ScreenPosX>0</ScreenPosX><ScreenPosY>0</ScreenPosY><Windows/></PreferedWindows></CallStack>
+      <Find-in-Files>
+        
+        
+        
+        
+      <ColumnWidth0>742</ColumnWidth0><ColumnWidth1>94</ColumnWidth1><ColumnWidth2>854</ColumnWidth2><ColumnWidth3>379</ColumnWidth3></Find-in-Files>
+      <Find-All-Declarations>
+        
+        
+        
+      <ColumnWidth0>664</ColumnWidth0><ColumnWidth1>94</ColumnWidth1><ColumnWidth2>1138</ColumnWidth2></Find-All-Declarations>
+      <Register>
+        <RegFindHistory/>
+      <PreferedWindows><Position>2</Position><ScreenPosX>0</ScreenPosX><ScreenPosY>0</ScreenPosY><Windows/></PreferedWindows></Register>
+    <QuickWatch><col-names><item>Expression</item><item>Location</item><item>Type</item><item>Value</item></col-names><col-widths><item>222</item><item>150</item><item>100</item><item>100</item></col-widths><QWatchHistory><item>rxTestBuff[rxTestBuffP++]</item><item>rxTestBuff[200]</item><item>rxT</item><item>COMPORT1</item><item>hdma_uart4_rx</item><item>SystemCoreClock</item></QWatchHistory><PreferedWindows><Position>2</Position><ScreenPosX>0</ScreenPosX><ScreenPosY>0</ScreenPosY><Windows/></PreferedWindows></QuickWatch><WATCH_1><expressions><item>COMPORT1</item><item>rxTestBuff</item><item>txTestBuff</item><item></item></expressions><col-names><item>Expression</item><item>Location</item><item>Type</item><item>Value</item></col-names><col-widths><item>155</item><item>150</item><item>100</item><item>227</item></col-widths><PreferedWindows><Position>2</Position><ScreenPosX>0</ScreenPosX><ScreenPosY>0</ScreenPosY><Windows><Window><Factory>Locals</Factory></Window></Windows></PreferedWindows></WATCH_1><Locals><col-names><item>Location</item><item>Type</item><item>Value</item><item>Variable</item></col-names><col-widths><item>150</item><item>100</item><item>142</item><item>100</item></col-widths><PreferedWindows><Position>2</Position><ScreenPosX>0</ScreenPosX><ScreenPosY>0</ScreenPosY><Windows><Window><Factory>WATCH_1</Factory></Window></Windows></PreferedWindows></Locals><Auto><PreferedWindows><Position>2</Position><ScreenPosX>0</ScreenPosX><ScreenPosY>0</ScreenPosY><Windows/></PreferedWindows><col-names><item>Expression</item><item>Location</item><item>Type</item><item>Value</item></col-names><col-widths><item>100</item><item>150</item><item>100</item><item>100</item></col-widths></Auto><MacroRegistration><macroFiles><item>D:\Program Files (x86)\IAR Systems\Embedded Workbench 7.3\arm\config\debugger\ST\STM32F4xx.dmac</item></macroFiles><col-names><item>File</item><item>Full Path</item></col-names><col-widths><item>120</item><item>400</item></col-widths><PreferedWindows><Position>2</Position><ScreenPosX>0</ScreenPosX><ScreenPosY>0</ScreenPosY><Windows><Window><Factory>DebuggerMacros</Factory></Window></Windows></PreferedWindows></MacroRegistration><DebuggerMacros><PreferedWindows><Position>2</Position><ScreenPosX>0</ScreenPosX><ScreenPosY>0</ScreenPosY><Windows><Window><Factory>MacroRegistration</Factory></Window></Windows></PreferedWindows><col-names><item>File</item><item>Name</item><item>Parameters</item></col-names><col-widths><item>300</item><item>160</item><item>240</item></col-widths></DebuggerMacros></Static>
+    <Windows>
+      
+      
+      
+      
+      
+    <Wnd5>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-2668-17446</Identity>
+            <TabName>Debug Log</TabName>
+            <Factory>Debug-Log</Factory>
+            <Session/>
+          </Tab>
+          <Tab>
+            <Identity>TabID-2145-17456</Identity>
+            <TabName>Build</TabName>
+            <Factory>Build</Factory>
+            <Session/>
+          </Tab>
+          
+          <Tab>
+            <Identity>TabID-23518-26880</Identity>
+            <TabName>Declarations</TabName>
+            <Factory>Find-All-Declarations</Factory>
+            <Session/>
+          </Tab>
+        <Tab>
+            <Identity>TabID-20756-19154</Identity>
+            <TabName>Find in Files</TabName>
+            <Factory>Find-in-Files</Factory>
+            <Session/>
+          </Tab></Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd5><Wnd6>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-13416-17449</Identity>
+            <TabName>Workspace</TabName>
+            <Factory>Workspace</Factory>
+            <Session>
+              
+            <NodeDict><ExpandedNode>GSM_RTSO_FATFS</ExpandedNode><ExpandedNode>GSM_RTSO_FATFS/Application</ExpandedNode><ExpandedNode>GSM_RTSO_FATFS/Application/EWARM</ExpandedNode><ExpandedNode>GSM_RTSO_FATFS/Application/User</ExpandedNode><ExpandedNode>GSM_RTSO_FATFS/Application/User/GSM</ExpandedNode><ExpandedNode>GSM_RTSO_FATFS/Drivers</ExpandedNode><ExpandedNode>GSM_RTSO_FATFS/Drivers/CMSIS</ExpandedNode><ExpandedNode>GSM_RTSO_FATFS/GSM</ExpandedNode></NodeDict></Session>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd6><Wnd7><Tabs><Tab><Identity>TabID-13685-29484</Identity><TabName>Watch 1</TabName><Factory>WATCH_1</Factory></Tab><Tab><Identity>TabID-14439-1615</Identity><TabName>Locals</TabName><Factory>Locals</Factory></Tab></Tabs><SelectedTab>0</SelectedTab></Wnd7><Wnd8><Tabs><Tab><Identity>TabID-11681-31430</Identity><TabName>Call Stack</TabName><Factory>CallStack</Factory></Tab></Tabs><SelectedTab>0</SelectedTab></Wnd8><Wnd9><Tabs><Tab><Identity>TabID-11940-18699</Identity><TabName>Disassembly</TabName><Factory>Disassembly</Factory><Session/></Tab></Tabs><SelectedTab>0</SelectedTab></Wnd9></Windows>
+    <Editor>
+      
+      
+      
+      
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Drivers\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_flash.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>20</YPos2><SelStart2>1841</SelStart2><SelEnd2>1841</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Drivers\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_flash_ramfunc.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>99</YPos2><SelStart2>4431</SelStart2><SelEnd2>4431</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Inc\tm_stm32f4_usb_vcp.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>224</YPos2><SelStart2>7091</SelStart2><SelEnd2>7091</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Src\main.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>58</YPos2><SelStart2>3516</SelStart2><SelEnd2>3516</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\GSM\gsm.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>138</YPos2><SelStart2>3834</SelStart2><SelEnd2>3834</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Middlewares\Third_Party\FreeRTOS\Source\portable\IAR\ARM_CM4F\port.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>232</YPos2><SelStart2>10355</SelStart2><SelEnd2>10355</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Src\tim.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>8</YPos2><SelStart2>1061</SelStart2><SelEnd2>1061</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\GSM\ComPort.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>107</YPos2><SelStart2>3656</SelStart2><SelEnd2>3656</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\GSM\programming.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>0</YPos2><SelStart2>177</SelStart2><SelEnd2>177</SelEnd2></Tab><ActiveTab>8</ActiveTab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Positions>
+      
+      
+      
+      
+      
+    <Top><Row0><Sizes><Toolbar-04EAEEA0><key>iaridepm.enu1</key></Toolbar-04EAEEA0></Sizes></Row0><Row1><Sizes><Toolbar-136C65C8><key>armstlink2.enu1</key></Toolbar-136C65C8><Toolbar-136C6F28><key>debuggergui.enu1</key></Toolbar-136C6F28></Sizes></Row1></Top><Left><Row0><Sizes><Wnd6><Rect><Top>-2</Top><Left>-2</Left><Bottom>355</Bottom><Right>352</Right><x>-2</x><y>-2</y><xscreen>199</xscreen><yscreen>200</yscreen><sizeHorzCX>154743</sizeHorzCX><sizeHorzCY>311526</sizeHorzCY><sizeVertCX>275272</sizeVertCX><sizeVertCY>556075</sizeVertCY></Rect></Wnd6></Sizes></Row0><Row1><Sizes><Wnd8><Rect><Top>-2</Top><Left>350</Left><Bottom>355</Bottom><Right>550</Right><x>350</x><y>-2</y><xscreen>200</xscreen><yscreen>200</yscreen><sizeHorzCX>155521</sizeHorzCX><sizeHorzCY>311526</sizeHorzCY><sizeVertCX>155521</sizeVertCX><sizeVertCY>556075</sizeVertCY></Rect></Wnd8></Sizes></Row1></Left><Right><Row0><Sizes><Wnd7><Rect><Top>-2</Top><Left>-2</Left><Bottom>355</Bottom><Right>403</Right><x>-2</x><y>-2</y><xscreen>267</xscreen><yscreen>242</yscreen><sizeHorzCX>207621</sizeHorzCX><sizeHorzCY>376947</sizeHorzCY><sizeVertCX>314930</sizeVertCX><sizeVertCY>556075</sizeVertCY></Rect></Wnd7></Sizes></Row0><Row1><Sizes><Wnd9><Rect><Top>-2</Top><Left>401</Left><Bottom>355</Bottom><Right>601</Right><x>401</x><y>-2</y><xscreen>200</xscreen><yscreen>200</yscreen><sizeHorzCX>155521</sizeHorzCX><sizeHorzCY>311526</sizeHorzCY><sizeVertCX>155521</sizeVertCX><sizeVertCY>556075</sizeVertCY></Rect></Wnd9></Sizes></Row1></Right><Bottom><Row0><Sizes><Wnd5><Rect><Top>-2</Top><Left>-2</Left><Bottom>218</Bottom><Right>1288</Right><x>-2</x><y>-2</y><xscreen>1290</xscreen><yscreen>220</yscreen><sizeHorzCX>1003110</sizeHorzCX><sizeHorzCY>342679</sizeHorzCY><sizeVertCX>154743</sizeVertCX><sizeVertCY>311526</sizeVertCY></Rect></Wnd5></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+  </Desktop>
+</Project>
+
+

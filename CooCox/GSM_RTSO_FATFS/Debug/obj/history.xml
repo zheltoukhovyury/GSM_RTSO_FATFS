@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<history>
+   <processor signature="arm-none-eabi-gcc noversion nomachine -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g2 -Wall -O0 -c -DSTM32F407VG -DUSE_STDPERIPH_DRIVER -DSTM32F407xx -DSTM32F407XX -D__FPU_USED -I..\..\..\..\..\..\..\..\..\GSM_RTSO_FATFS-master\Middlewares\Third_Party\FreeRTOS\Source\portable\GCC -I..\..\..\..\..\..\..\..\..\GSM_RTSO_FATFS-master\CooCox\components\coocox-master -I..\..\..\..\..\..\..\..\.. -I..\..\..\..\..\..\..\..\..\GSM_RTSO_FATFS-master\Middlewares\Third_Party\FreeRTOS\Source\include -I..\..\..\..\..\..\..\..\..\GSM_RTSO_FATFS-master\CooCox\components\coocox-master\cmsis_core -I..\..\..\..\..\..\..\..\..\GSM_RTSO_FATFS-master\Inc -I..\..\..\..\..\..\..\..\..\GSM_RTSO_FATFS-master\Middlewares\Third_Party\FreeRTOS\Source\CMSIS_RTOS -I..\..\..\..\..\..\..\..\..\GSM_RTSO_FATFS-master\Middlewares\Third_Party\FreeRTOS\Source\portable\GCC\ARM_CM4F -I..\..\..\..\..\..\..\..\..\GSM_RTSO_FATFS-master\CooCox\components\coocox-master\cmsis_core\source -I..\..\..\..\..\..\..\..\..\GSM_RTSO_FATFS-master\Drivers\CMSIS\Include -I..\..\..\..\..\..\..\..\..\GSM_RTSO_FATFS-master\Drivers\STM32F4xx_StdPeriph_Driver\inc -I..\..\..\..\..\..\..\..\..\GSM_RTSO_FATFS-master\Middlewares\Third_Party\FreeRTOS\Source\portable -I..\..\..\..\..\..\..\..\..\GSM_RTSO_FATFS-master\Drivers\CMSIS\Device\ST\STM32F4xx\Include -I..\..\..\..\..\..\..\..\..\GSM_RTSO_FATFS-master\Middlewares\Third_Party\FreeRTOS\Source\portable\GCC\ARM_CM4F -I..\..\..\..\..\..\..\..\..\GSM_RTSO_FATFS-master\GSM -I..\..\..\..\..\..\..\..\..\GSM_RTSO_FATFS-master">
+      <target file="queue.o" lastModified="1595bb14ec1">
+         <source file="..\..\..\..\Middlewares\Third_Party\FreeRTOS\Source\queue.c" lastModified="15955827207"/>
+      </target>
+      <target file="VoiceCall.o" lastModified="1595bb125ae">
+         <source file="..\..\..\..\GSM\VoiceCall.c" lastModified="1595b83d1f1"/>
+      </target>
+      <target file="port.o" lastModified="1595bb14d5a">
+         <source file="..\..\..\..\Middlewares\Third_Party\FreeRTOS\Source\portable\GCC\ARM_CM4F\port.c" lastModified="154cefae70e"/>
+      </target>
+      <target file="timers.o" lastModified="1595bb138fd">
+         <source file="..\..\..\..\Middlewares\Third_Party\FreeRTOS\Source\timers.c" lastModified="15955827254"/>
+      </target>
+      <target file="heap_2.o" lastModified="1595bb1551a">
+         <source file="..\..\..\..\Middlewares\Third_Party\FreeRTOS\Source\portable\MemMang\heap_2.c" lastModified="1595582753d"/>
+      </target>
+      <target file="cmsis_os.o" lastModified="1595bb14897">
+         <source file="..\..\..\..\Middlewares\Third_Party\FreeRTOS\Source\CMSIS_RTOS\cmsis_os.c" lastModified="15955827281"/>
+      </target>
+      <target file="list.o" lastModified="1595bb14432">
+         <source file="..\..\..\..\Middlewares\Third_Party\FreeRTOS\Source\list.c" lastModified="159558271e8"/>
+      </target>
+      <target file="1Wire.o" lastModified="1595bb14050">
+         <source file="..\..\..\..\GSM\1Wire.c" lastModified="15955826d6a"/>
+      </target>
+      <target file="event_groups.o" lastModified="1595bb15038">
+         <source file="..\..\..\..\Middlewares\Third_Party\FreeRTOS\Source\event_groups.c" lastModified="159558271c4"/>
+      </target>
+      <target file="croutine.o" lastModified="1595bb14f4e">
+         <source file="..\..\..\..\Middlewares\Third_Party\FreeRTOS\Source\croutine.c" lastModified="1595582718d"/>
+      </target>
+      <target file="TQueue.o" lastModified="1595bb12178">
+         <source file="..\..\..\..\GSM\TQueue.c" lastModified="15955826e26"/>
+      </target>
+      <target file="TcpIp.o" lastModified="1595bb1545f">
+         <source file="..\..\..\..\GSM\TcpIp.c" lastModified="15955826e48"/>
+      </target>
+      <target file="Arch.o" lastModified="1595bb120eb">
+         <source file="..\..\..\..\GSM\Arch.c" lastModified="15959eb9e10"/>
+      </target>
+      <target file="freertos.o" lastModified="1595bb13c97">
+         <source file="..\..\..\..\Src\freertos.c" lastModified="15959e848d1"/>
+      </target>
+      <target file="SMS.o" lastModified="1595bb13f75">
+         <source file="..\..\..\..\GSM\SMS.c" lastModified="15955826e06"/>
+      </target>
+      <target file="tasks.o" lastModified="1595bb13e8b">
+         <source file="..\..\..\..\Middlewares\Third_Party\FreeRTOS\Source\tasks.c" lastModified="1595582722f"/>
+      </target>
+   </processor>
+</history>

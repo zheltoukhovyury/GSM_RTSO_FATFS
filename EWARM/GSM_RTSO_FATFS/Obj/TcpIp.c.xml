@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<source name="TcpIp.c" location="E:\Git_Rep\GSM_RTSO_FATFS\GSM_RTSO_FATFS\GSM" is_link="no">
+ <warning>
+ <file>E:\Git_Rep\GSM_RTSO_FATFS\GSM_RTSO_FATFS\GSM\TcpIp.c</file>
+  <warningID>40</warningID>
+  <method/>
+  <lineNo>303</lineNo>
+  <column>12</column>
+  <checkName>RED-local-hides-local</checkName>
+  <message>Variable `i&apos; hides a previous definition</message>
+  <trace/>
+  <rules>CERT-DCL01-C CERT-DCL01-CPP MISRAC2004-5.2 MISRAC++2008-2-10-2 MISRAC2012-Rule-5.3 </rules>
+  <severity>Medium</severity>
+ </warning>
+ <warning>
+ <file>E:\Git_Rep\GSM_RTSO_FATFS\GSM_RTSO_FATFS\GSM\TcpIp.c</file>
+  <warningID>41</warningID>
+  <method/>
+  <lineNo>346</lineNo>
+  <column>11</column>
+  <checkName>RED-local-hides-local</checkName>
+  <message>Variable `i&apos; hides a previous definition</message>
+  <trace/>
+  <rules>CERT-DCL01-C CERT-DCL01-CPP MISRAC2004-5.2 MISRAC++2008-2-10-2 MISRAC2012-Rule-5.3 </rules>
+  <severity>Medium</severity>
+ </warning>
+</source>

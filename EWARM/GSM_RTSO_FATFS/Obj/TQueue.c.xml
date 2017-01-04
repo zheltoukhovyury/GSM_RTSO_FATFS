@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<source name="TQueue.c" location="E:\Git_Rep\GSM_RTSO_FATFS\GSM_RTSO_FATFS\GSM" is_link="no">
+ <warning>
+ <file>E:\Git_Rep\GSM_RTSO_FATFS\GSM_RTSO_FATFS\GSM\TQueue.c</file>
+  <warningID>44</warningID>
+  <method>QueuePutByte</method>
+  <lineNo>21</lineNo>
+  <column>6</column>
+  <checkName>SPC-return</checkName>
+  <message>Missing return statement on some paths</message>
+  <trace>
+   <traceBlock line="21" file="E:\Git_Rep\GSM_RTSO_FATFS\GSM_RTSO_FATFS\GSM\TQueue.c" method="QueuePutByte">
+    <traceLine line="21" text="Start of bad trace for QueuePutByte" type="!"/>
+    <traceLine line="23" text="if (handle==_NULL) is false" type="^"/>
+    <traceLine line="24" text="while (handle-&gt;locked) is false" type="^"/>
+    <traceLine line="26" text="if (handle-&gt;TxQueueWrite&gt;=handle-&gt;TxQueueLen) is false" type="^"/>
+    <traceLine line="30" text="if (handle-&gt;TxQueueWrite==handle-&gt;TxQueueRead) is false" type="^"/>
+    <traceLine line="22" text="return" type=" "/>
+    <traceLine line="33" text="End of function " type="!"/>
+   </traceBlock>
+  </trace>
+  <rules>CERT-MSC37-C MISRAC2004-16.8 MISRAC++2008-8-4-3 MISRAC2012-Rule-17.4 </rules>
+  <severity>Medium</severity>
+ </warning>
+ <warning>
+ <file>E:\Git_Rep\GSM_RTSO_FATFS\GSM_RTSO_FATFS\GSM\TQueue.c</file>
+  <warningID>43</warningID>
+  <method>QueueHasData</method>
+  <lineNo>61</lineNo>
+  <column>5</column>
+  <checkName>SPC-return</checkName>
+  <message>Missing return statement on some paths</message>
+  <trace>
+   <traceBlock line="61" file="E:\Git_Rep\GSM_RTSO_FATFS\GSM_RTSO_FATFS\GSM\TQueue.c" method="QueueHasData">
+    <traceLine line="61" text="Start of bad trace for QueueHasData" type="!"/>
+    <traceLine line="63" text="if (handle==_NULL) is false" type="^"/>
+    <traceLine line="65" text="if (handle-&gt;TxQueueWrite&gt;=handle-&gt;TxQueueRead) is false" type="^"/>
+    <traceLine line="67" text="if (handle-&gt;TxQueueWrite&lt;handle-&gt;TxQueueRead) is false" type="^"/>
+    <traceLine line="62" text="return" type=" "/>
+    <traceLine line="69" text="End of function " type="!"/>
+   </traceBlock>
+  </trace>
+  <rules>CERT-MSC37-C MISRAC2004-16.8 MISRAC++2008-8-4-3 MISRAC2012-Rule-17.4 </rules>
+  <severity>Medium</severity>
+ </warning>
+ <warning>
+ <file>E:\Git_Rep\GSM_RTSO_FATFS\GSM_RTSO_FATFS\GSM\TQueue.c</file>
+  <warningID>42</warningID>
+  <method>QueueGetFree</method>
+  <lineNo>72</lineNo>
+  <column>5</column>
+  <checkName>SPC-return</checkName>
+  <message>Missing return statement on some paths</message>
+  <trace>
+   <traceBlock line="72" file="E:\Git_Rep\GSM_RTSO_FATFS\GSM_RTSO_FATFS\GSM\TQueue.c" method="QueueGetFree">
+    <traceLine line="72" text="Start of bad trace for QueueGetFree" type="!"/>
+    <traceLine line="74" text="if (handle==_NULL) is false" type="^"/>
+    <traceLine line="75" text="if (handle-&gt;TxQueueWrite&gt;=handle-&gt;TxQueueRead) is false" type="^"/>
+    <traceLine line="77" text="if (handle-&gt;TxQueueWrite&lt;handle-&gt;TxQueueRead) is false" type="^"/>
+    <traceLine line="73" text="return" type=" "/>
+    <traceLine line="79" text="End of function " type="!"/>
+   </traceBlock>
+  </trace>
+  <rules>CERT-MSC37-C MISRAC2004-16.8 MISRAC++2008-8-4-3 MISRAC2012-Rule-17.4 </rules>
+  <severity>Medium</severity>
+ </warning>
+</source>
