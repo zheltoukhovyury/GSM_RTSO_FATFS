@@ -172,7 +172,7 @@ BOOL GetByteForTx(ComPortHandle* handle, unsigned char* dest)
 }//
 
 
-        volatile unsigned char testb;
+
 
 BOOL GetByte(ComPortHandle* handle, unsigned char* dest)
 {
@@ -185,11 +185,7 @@ BOOL GetByte(ComPortHandle* handle, unsigned char* dest)
 		handle->RxBufferRead = 0;
 		return FALSE;
 	}
-        
 
-        testb = testb;
-        testb = handle->RxBuff[handle->RxBufferRead];
-        testb = testb;
 	*dest = handle->RxBuff[handle->RxBufferRead++];
 	return TRUE;
 }//

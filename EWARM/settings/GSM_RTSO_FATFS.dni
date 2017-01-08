@@ -3,7 +3,7 @@ stlinkserialNo=4BBD654D
 stlinkfoundProbes=
 CStepIntDis=_ 0
 [DebugChecksum]
-Checksum=-784392265
+Checksum=-2111678355
 [Exceptions]
 StopOnUncaught=_ 0
 StopOnThrow=_ 0
@@ -106,14 +106,12 @@ Bp3=_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Src\main.c}.81.3" 0 0 1 "" 0 "" 0
 Bp4=_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Src\tim.cpp}.49.1" 0 0 1 "" 0 "" 0
 Bp5=_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Src\tim.cpp}.49.1" 0 0 1 "" 0 "" 0
 Bp6=_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Src\main.cpp}.119.1" 0 0 1 "" 0 "" 0
-Count=7
+Bp7=_ 1 "EMUL_CODE" "{$PROJ_DIR$\..\GSM\programming.c}.98.11" 0 0 1 "" 0 "" 0
+Count=8
 [Log file]
 LoggingEnabled=_ 0
 LogFile=_ ""
 Category=_ 0
-[TermIOLog]
-LoggingEnabled=_ 0
-LogFile=_ ""
 [Aliases]
 A0=_ "E:\Git_Rep\GSM_RTSO_FATFS\GSM_RTSO_FATFS\Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\iar\startup_stm32f40xx.s" ""
 A1=_ "E:\Git_Rep\GSM_RTSO_FATFS\GSM_RTSO_FATFS\Drivers\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_iwdg.c" ""
@@ -133,3 +131,6 @@ Exclusions=
 Enabled=0
 [CallStackStripe]
 ShowTiming=1
+[TermIOLog]
+LoggingEnabled=_ 0
+LogFile=_ ""

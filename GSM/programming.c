@@ -49,7 +49,7 @@ void ProgrammingMaschine(void)
         RcvP = 0;
         continue;
       }
-      if(RcvP > 2 && RcvP > (RcvBuffer[1] + 4))
+      if(RcvP > 2 && RcvP >= (RcvBuffer[1] + 4))
       {
         RcvP = 0;
         opcode = RcvBuffer[2];
@@ -75,7 +75,7 @@ void ProgrammingMaschine(void)
         RcvP = 0;
         continue;
       }
-      if(RcvP > 2 && RcvP > (RcvBuffer[1] + 4))
+      if(RcvP > 2 && RcvP >= (RcvBuffer[1] + 4))
       {
         RcvP = 0;
         opcode = RcvBuffer[2];
@@ -83,16 +83,20 @@ void ProgrammingMaschine(void)
         {
         default:
         case 1:
-                    unsigned char packet[10];
-          int len = CreatePacket(1, 0, packet, NULL);
+        case 2:{
+          unsigned char packet[10];
+          int len = CreatePacket(1, 0, NULL, packet);
           int i;
           for(i = 0; i < len; i++)
             PutByte(Port, packet[i]);
-          break;
-        case 2:
-          opcode = opcode;
-          
-          break;
+          break;}
+        case 3:{
+          unsigned char packet[10];
+          int len = CreatePacket(3, 0, NULL, packet);
+          int i;
+          for(i = 0; i < len; i++)
+            PutByte(Port, packet[i]);
+          break;}
         }
       }
     }
@@ -108,4 +112,5 @@ int CreatePacket(unsigned char Opcode, int dataLen, unsigned char* data, unsigne
   buffer[2] = Opcode;
   memcpy(&buffer[3], data, dataLen);
   buffer[3 + dataLen] = 0xCC;
+  return 4 + dataLen;
 }
