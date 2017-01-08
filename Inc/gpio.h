@@ -63,16 +63,40 @@
 void Init_GPIO(void);
 
 /* USER CODE BEGIN Prototypes */
-void GSM_POWERKEY_Set(uint8_t newState);
-void GSM_POWERPIN_Set(uint8_t newState);
-void GSM_SIM_Switcher_Set(uint8_t newState);
-uint8_t GSM_SIM_Switcher_Get(void);
-void SetDirection_STM32(OWDirection dir);
-void drive_OW_low_STM32 (void);
-void drive_OW_high_STM32 (void);
-unsigned char read_OW_STM32 (void);
-unsigned char OW_wait_HIGH_STM32(uint32_t time);
-void wait_STM32(unsigned int time);
+extern void GSM_POWERKEY_Set(uint8_t newState);
+extern void GSM_POWERPIN_Set(uint8_t newState);
+extern void GSM_SIM_Switcher_Set(uint8_t newState);
+extern uint8_t GSM_SIM_Switcher_Get(void);
+
+extern void SetDirection_Tochka8(OWDirection dir);
+extern void drive_OW_low_Tochka8 (void);
+extern void drive_OW_high_Tochka8 (void);
+
+
+extern void SetDirection_Tochka4(OWDirection dir);
+extern void drive_OW_low_Tochka4 (void);
+extern void drive_OW_high_Tochka4 (void);
+
+
+extern void SetDirection_Orbita(OWDirection dir);
+extern void drive_OW_low_Orbita (void);
+extern void drive_OW_high_Orbita (void);
+
+extern void SetDirection_STM32(OWDirection dir);
+extern void drive_OW_low_STM32 (void);
+extern void drive_OW_high_STM32 (void);
+extern unsigned char read_OW_STM32 (void);
+
+
+extern unsigned char OW_wait_HIGH_PIC(uint32_t  time);
+extern void wait_PIC(unsigned int time);
+
+extern unsigned char OW_wait_HIGH_STM32(uint32_t  time);
+extern void wait_STM32(unsigned int time);
+
+
+
+
 /* USER CODE END Prototypes */
 
 #ifdef __cplusplus

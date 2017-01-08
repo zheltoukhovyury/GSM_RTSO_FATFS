@@ -4,6 +4,7 @@
 #include "hardwareProfile.h"
 #include "GenericTypeDefs.h"
 #include "1Wire.h"
+#include "gpio.h"
 #include "tick.h"
 #include "hardwareProfile.h"
 

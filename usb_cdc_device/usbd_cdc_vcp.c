@@ -26,7 +26,7 @@
   */ 
 
 /* Includes ------------------------------------------------------------------*/
-#include "usbd_cdc_vcp.h"
+//#include "usbd_cdc_vcp.h"
 #include "usb_conf.h"
 
 #include "usb_core.h"

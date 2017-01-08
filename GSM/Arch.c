@@ -8,6 +8,7 @@
 #include "Arch.h"
 #include "TcpIp.h"
 #include "VoiceCall.h"
+#include "programming.h"
 
 
 
@@ -22,6 +23,7 @@ void ComminicationTaskLoop(void)
   {
     //ARCH_Task();
     CallTask();
+    ProgrammingMaschine();
   }
 }
 

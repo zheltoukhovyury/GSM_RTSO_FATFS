@@ -34,7 +34,7 @@
 #include "usbd_cdc_core.h"
 #include "usbd_conf.h"
 
-uint16_t VCP_DataTx   (uint8_t* Buf, uint32_t Len);
+extern uint16_t VCP_DataTx   (uint8_t* Buf, uint32_t Len);
 uint16_t VCP_DataRx   (uint8_t* Buf, uint32_t Len);
 
 /* Exported typef ------------------------------------------------------------*/

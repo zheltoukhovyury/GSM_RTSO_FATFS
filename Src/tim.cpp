@@ -1,6 +1,7 @@
 #include "stm32f4xx_tim.h"
 #include "stm32f4xx_rcc.h"
 
+
 uint32_t sysTick = 0;
 
 void InitSysTicks(void)
@@ -30,14 +31,13 @@ void InitSysTicks(void)
   TIM_ITConfig(TIM1, TIM_IT_Update, ENABLE);
 }
 
+
 void TIM1_UP_TIM10_IRQHandler(){
   
   if (TIM_GetITStatus(TIM1, TIM_IT_Update) != RESET)
   {
     
-    __disable_fiq();
     sysTick++;
-    __enable_fiq();
     TIM_ClearITPendingBit(TIM1, TIM_IT_Update);
   }
 }

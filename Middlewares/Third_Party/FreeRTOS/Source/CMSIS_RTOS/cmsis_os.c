@@ -788,14 +788,14 @@ osPoolId osPoolCreate (const osPoolDef_t *pool_def)
   uint32_t i;
   
   /* First have to allocate memory for the pool control block. */
-  thePool = pvPortMalloc(sizeof(os_pool_cb_t));
+  thePool = (osPoolId) pvPortMalloc(sizeof(os_pool_cb_t));
   if (thePool) {
     thePool->pool_sz = pool_def->pool_sz;
     thePool->item_sz = itemSize;
     thePool->currentIndex = 0;
     
     /* Memory for markers */
-    thePool->markers = pvPortMalloc(pool_def->pool_sz);
+    thePool->markers = (uint8_t*)pvPortMalloc(pool_def->pool_sz);
     if (thePool->markers) {
       /* Now allocate the pool itself. */
       thePool->pool = pvPortMalloc(pool_def->pool_sz * itemSize);
@@ -1057,7 +1057,9 @@ osMailQId osMailCreate (const osMailQDef_t *queue_def, osThreadId thread_id)
   
   
   /* Create a mail queue control block */
-  *(queue_def->cb) = pvPortMalloc(sizeof(struct os_mailQ_cb));
+  
+    
+  *(queue_def->cb) = (os_mailQ_cb_t*)pvPortMalloc(sizeof(struct os_mailQ_cb));
   if (*(queue_def->cb) == NULL) {
     return NULL;
   }

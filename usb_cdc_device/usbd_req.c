@@ -29,7 +29,7 @@
 #include "usbd_req.h"
 #include "usbd_ioreq.h"
 #include "usbd_desc.h"
-
+#include "string.h"
 
 /** @addtogroup STM32_USB_OTG_DEVICE_LIBRARY
   * @{
@@ -732,7 +732,7 @@ static void USBD_SetFeature(USB_OTG_CORE_HANDLE  *pdev,
       dctl.b.tstctl = 5;
       break;
     }
-    SET_TEST_MODE = dctl;
+    memcpy((void*)&SET_TEST_MODE, (void*)&dctl, sizeof(dctl));
     pdev->dev.test_mode = 1;
     USBD_CtlSendStatus(pdev);
   }
@@ -866,3 +866,4 @@ static uint8_t USBD_GetLen(uint8_t *buf)
   */ 
 
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
+

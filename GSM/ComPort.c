@@ -5,7 +5,6 @@
 #include <stdlib.h>
 
 
-#include "task.h"
 #include "misc.h"
 #include "stm32f4xx_rcc.h"
 #include "stm32f4xx_gpio.h"
@@ -19,6 +18,8 @@ ComPortHandle COMPORT1 = {0, NULL};
 ComPortHandle COMPORT2 = {0, NULL};
 unsigned char rxTestBuff[200];
 unsigned char txTestBuff[200];
+
+unsigned char rxTestBuff2[200];
 
 
 
@@ -99,10 +100,10 @@ ComPortHandle* OpenPort(unsigned char PortNumber, UINT32 Baudrate)
     COMPORT2.TxQueueRead = 0;
     COMPORT2.TxQueueWrite = 0;
 
-    //COMPORT2.RxBuff = rxTestBuff;
+    COMPORT2.RxBuff = rxTestBuff2;
     //COMPORT2.TxQueue = txTestBuff;
 
-    return &COMPORT1;
+    return &COMPORT2;
   break;}
   
   
@@ -196,7 +197,7 @@ BOOL GetByte(ComPortHandle* handle, unsigned char* dest)
 
 void PutByteToRxbuffer(ComPortHandle* handle, unsigned char b)
 {
-  TM_USB_VCP_Putc(b);
+
 	if (handle->RxBufferWrite >= handle->RxBufferLen)
 		handle->RxBufferWrite = 0;
 
@@ -249,7 +250,6 @@ void ComPortCycle(void)
     unsigned char b;
     while(GetByteForTx(&COMPORT1, (unsigned char *)&b))
     {
-      //TM_USB_VCP_Putc(b);
       while(USART_GetFlagStatus(UART4, USART_FLAG_TC) == RESET);
       USART_SendData(UART4, b);
       while(USART_GetFlagStatus(UART4, USART_FLAG_TC) == RESET);

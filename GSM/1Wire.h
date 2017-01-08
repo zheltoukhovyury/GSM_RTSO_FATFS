@@ -13,30 +13,6 @@ typedef enum
 
 extern void OnrWireTaskLoop(void);
 
-void SetDirection_Tochka8(OWDirection dir);
-void drive_OW_low_Tochka8 (void);
-void drive_OW_high_Tochka8 (void);
-
-
-void SetDirection_Tochka4(OWDirection dir);
-void drive_OW_low_Tochka4 (void);
-void drive_OW_high_Tochka4 (void);
-
-
-void SetDirection_Orbita(OWDirection dir);
-void drive_OW_low_Orbita (void);
-void drive_OW_high_Orbita (void);
-
-void SetDirection_STM32(OWDirection dir);
-void drive_OW_low_STM32 (void);
-void drive_OW_high_STM32 (void);
-unsigned char read_OW_STM32 (void);
-
-unsigned char OW_wait_HIGH_PIC(uint32_t  time);
-void wait_PIC(unsigned int time);
-
-unsigned char OW_wait_HIGH_STM32(uint32_t  time);
-void wait_STM32(unsigned int time);
 
 
 

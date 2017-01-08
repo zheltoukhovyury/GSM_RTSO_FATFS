@@ -166,12 +166,26 @@ void xPortSysTickHandler( void );
 /*
  * Start first task is a separate function so it can be tested in isolation.
  */
+#ifdef __cplusplus
+extern "C"
+{
+  extern void vPortStartFirstTask( void );
+}
+#else
 extern void vPortStartFirstTask( void );
+#endif
 
 /*
  * Turn the VFP on.
  */
+#ifdef __cplusplus
+extern "C"
+{
+extern   void vPortEnableVFP( void );
+}
+#else
 extern void vPortEnableVFP( void );
+#endif
 
 /*
  * Used to catch tasks that attempt to return from their implementing function.

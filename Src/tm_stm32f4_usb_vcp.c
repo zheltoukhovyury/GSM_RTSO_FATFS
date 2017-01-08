@@ -20,6 +20,8 @@
 #include "usbd_usr.h"
 #include "usbd_core.h"
 
+
+
 /* Private */
 uint8_t TM_INT_USB_VCP_ReceiveBuffer[USB_VCP_RECEIVE_BUFFER_LENGTH];
 uint32_t tm_int_usb_vcp_buf_in, tm_int_usb_vcp_buf_out, tm_int_usb_vcp_buf_num;
@@ -33,6 +35,7 @@ extern uint8_t TM_INT_USB_VCP_ReceiveBuffer[USB_VCP_RECEIVE_BUFFER_LENGTH];
 
 TM_USB_VCP_Result TM_USB_VCP_Init(void) {
 	/* Initialize USB */
+  
 	USBD_Init(	&USB_OTG_dev,
 #ifdef USE_USB_OTG_FS
 				USB_OTG_FS_CORE_ID,

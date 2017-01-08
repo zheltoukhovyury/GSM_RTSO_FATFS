@@ -49,10 +49,13 @@
 /* USER CODE BEGIN Includes */
 #include "tim.h"
 #include "gpio.h"
+#include "FreeRTOS.h"
+#include "task.h"
+
 #include "../GSM/gsm.h"
 #include "../GSM/ComPort.h"
 #include "../GSM/hardwareProfile.h"
-
+#include "freertosInit.h"
 /* USER CODE END Includes */
 
 /* Private variables ---------------------------------------------------------*/
@@ -63,7 +66,6 @@ THardwareType HardwareType = HrdwareType_STM32;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
-void MX_FREERTOS_Init(void);
 
 /* USER CODE BEGIN PFP */
 /* Private function prototypes -----------------------------------------------*/
@@ -107,7 +109,6 @@ int main(void)
   /* USER CODE END 3 */
 
 }
-
 
 void SysTick_Handler(void)
 {

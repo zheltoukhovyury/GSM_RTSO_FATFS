@@ -1167,13 +1167,13 @@
         <name>$PROJ_DIR$\..\GSM\hardwareProfile.h</name>
       </file>
       <file>
-        <name>$PROJ_DIR$\..\Src\main.c</name>
+        <name>$PROJ_DIR$\..\Src\main.cpp</name>
       </file>
       <file>
         <name>$PROJ_DIR$\..\Src\stm32f4xx_it.c</name>
       </file>
       <file>
-        <name>$PROJ_DIR$\..\Src\tim.c</name>
+        <name>$PROJ_DIR$\..\Src\tim.cpp</name>
       </file>
       <file>
         <name>$PROJ_DIR$\..\Src\tm_stm32f4_usb_vcp.c</name>

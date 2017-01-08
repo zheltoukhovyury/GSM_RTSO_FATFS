@@ -67,6 +67,7 @@
 #include "usbd_cdc_core.h"
 #include "usbd_desc.h"
 #include "usbd_req.h"
+#include "usb_core.h"
 
 
 /** @addtogroup STM32_USB_OTG_DEVICE_LIBRARY
@@ -141,7 +142,7 @@ extern uint8_t USBD_DeviceDesc   [USB_SIZ_DEVICE_DESC];
     #pragma data_alignment=4   
   #endif
 #endif /* USB_OTG_HS_INTERNAL_DMA_ENABLED */
-__ALIGN_BEGIN uint8_t usbd_cdc_CfgDesc  [USB_CDC_CONFIG_DESC_SIZ] __ALIGN_END ;
+//__ALIGN_BEGIN uint8_t usbd_cdc_CfgDesc  [USB_CDC_CONFIG_DESC_SIZ] __ALIGN_END ;
 
 #ifdef USB_OTG_HS_INTERNAL_DMA_ENABLED
   #if defined ( __ICCARM__ ) /*!< IAR Compiler */
@@ -432,19 +433,19 @@ static uint8_t  usbd_cdc_Init (void  *pdev,
   uint8_t *pbuf;
 
   /* Open EP IN */
-  DCD_EP_Open(pdev,
+  DCD_EP_Open((USB_OTG_CORE_HANDLE*)pdev,
               CDC_IN_EP,
               CDC_DATA_IN_PACKET_SIZE,
               USB_OTG_EP_BULK);
   
   /* Open EP OUT */
-  DCD_EP_Open(pdev,
+  DCD_EP_Open((USB_OTG_CORE_HANDLE*)pdev,
               CDC_OUT_EP,
               CDC_DATA_OUT_PACKET_SIZE,
               USB_OTG_EP_BULK);
   
   /* Open Command IN EP */
-  DCD_EP_Open(pdev,
+  DCD_EP_Open((USB_OTG_CORE_HANDLE*)pdev,
               CDC_CMD_EP,
               CDC_CMD_PACKET_SZE,
               USB_OTG_EP_INT);
@@ -457,7 +458,7 @@ static uint8_t  usbd_cdc_Init (void  *pdev,
   APP_FOPS.pIf_Init();
 
   /* Prepare Out endpoint to receive next packet */
-  DCD_EP_PrepareRx(pdev,
+  DCD_EP_PrepareRx((USB_OTG_CORE_HANDLE*)pdev,
                    CDC_OUT_EP,
                    (uint8_t*)(USB_Rx_Buffer),
                    CDC_DATA_OUT_PACKET_SIZE);
@@ -476,15 +477,15 @@ static uint8_t  usbd_cdc_DeInit (void  *pdev,
                                  uint8_t cfgidx)
 {
   /* Open EP IN */
-  DCD_EP_Close(pdev,
+  DCD_EP_Close((USB_OTG_CORE_HANDLE*)pdev,
               CDC_IN_EP);
   
   /* Open EP OUT */
-  DCD_EP_Close(pdev,
+  DCD_EP_Close((USB_OTG_CORE_HANDLE*)pdev,
               CDC_OUT_EP);
   
   /* Open Command IN EP */
-  DCD_EP_Close(pdev,
+  DCD_EP_Close((USB_OTG_CORE_HANDLE*)pdev,
               CDC_CMD_EP);
 
   /* Restore default state of the Interface physical components */
@@ -520,7 +521,7 @@ static uint8_t  usbd_cdc_Setup (void  *pdev,
           APP_FOPS.pIf_Ctrl(req->bRequest, CmdBuff, req->wLength);
           
           /* Send the data to the host */
-          USBD_CtlSendData (pdev, 
+          USBD_CtlSendData ((USB_OTG_CORE_HANDLE*)pdev, 
                             CmdBuff,
                             req->wLength);          
         }
@@ -533,7 +534,7 @@ static uint8_t  usbd_cdc_Setup (void  *pdev,
           /* Prepare the reception of the buffer over EP0
           Next step: the received data will be managed in usbd_cdc_EP0_TxSent() 
           function. */
-          USBD_CtlPrepareRx (pdev,
+          USBD_CtlPrepareRx ((USB_OTG_CORE_HANDLE*)pdev,
                              CmdBuff,
                              req->wLength);          
         }
@@ -547,7 +548,7 @@ static uint8_t  usbd_cdc_Setup (void  *pdev,
       return USBD_OK;
       
     default:
-      USBD_CtlError (pdev, req);
+      USBD_CtlError ((USB_OTG_CORE_HANDLE*)pdev, req);
       return USBD_FAIL;
     
       
@@ -567,13 +568,13 @@ static uint8_t  usbd_cdc_Setup (void  *pdev,
         len = MIN(USB_CDC_DESC_SIZ , req->wLength);
       }
       
-      USBD_CtlSendData (pdev, 
+      USBD_CtlSendData ((USB_OTG_CORE_HANDLE*)pdev, 
                         pbuf,
                         len);
       break;
       
     case USB_REQ_GET_INTERFACE :
-      USBD_CtlSendData (pdev,
+      USBD_CtlSendData ((USB_OTG_CORE_HANDLE*)pdev,
                         (uint8_t *)&usbd_cdc_AltSet,
                         1);
       break;
@@ -586,7 +587,7 @@ static uint8_t  usbd_cdc_Setup (void  *pdev,
       else
       {
         /* Call the error management function (command will be nacked */
-        USBD_CtlError (pdev, req);
+        USBD_CtlError ((USB_OTG_CORE_HANDLE*)pdev, req);
       }
       break;
     }
@@ -651,7 +652,7 @@ static uint8_t  usbd_cdc_DataIn (void *pdev, uint8_t epnum)
       }
       
       /* Prepare the available data buffer to be sent on IN endpoint */
-      DCD_EP_Tx (pdev,
+      DCD_EP_Tx ((USB_OTG_CORE_HANDLE*)pdev,
                  CDC_IN_EP,
                  (uint8_t*)&APP_Rx_Buffer[USB_Tx_ptr],
                  USB_Tx_length);
@@ -680,7 +681,7 @@ static uint8_t  usbd_cdc_DataOut (void *pdev, uint8_t epnum)
   APP_FOPS.pIf_DataRx(USB_Rx_Buffer, USB_Rx_Cnt);
   
   /* Prepare Out endpoint to receive next packet */
-  DCD_EP_PrepareRx(pdev,
+  DCD_EP_PrepareRx((USB_OTG_CORE_HANDLE*)pdev,
                    CDC_OUT_EP,
                    (uint8_t*)(USB_Rx_Buffer),
                    CDC_DATA_OUT_PACKET_SIZE);
@@ -767,7 +768,7 @@ static void Handle_USBAsynchXfer (void *pdev)
     }
     USB_Tx_State = 1; 
 
-    DCD_EP_Tx (pdev,
+    DCD_EP_Tx ((USB_OTG_CORE_HANDLE*)pdev,
                CDC_IN_EP,
                (uint8_t*)&APP_Rx_Buffer[USB_Tx_ptr],
                USB_Tx_length);
